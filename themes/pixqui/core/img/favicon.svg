@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<title>favicon</title>
+	<defs>
+		<image  width="31" height="22" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAWCAMAAAAPf7fDAAAAAXNSR0IB2cksfwAAAjdQTFRFAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v7+/////////////////////////////////////////////////v7+4A8ImgAAAL10Uk5TAAAEJ2eUn4xWEQIBEmWss5yVpLeiRwgXeKtue4lsT4bSUQkQXIqZwa6vy2JxyCAFJF+QfJeDgbSIZI7WqIU0zMStmKbci8IPI7a6XXOPf5qd3tEcUMeR7f/xqZOgkpZYGBYqQYS+/sC5p9rGSXeCjbK7yZ7Ppap0VBRav4BhenZ+clvyDDixU7xj+ff133nDOrDr6tCjbe/Vh9T85eZC+3Bq9DzY/eTK+uJFE9nu8AM357jjB1l1CzkKLS4AZY06TgAAAhlJREFUeJxjZEABjHDw/T9EAEWaGyHP+Po/hjyjGFjmG1jZw///keW5JJ4zizN+5QFJPZMGkZeR5Bn1GBmvaUMMvqoDlP8gyHj0H0Jen/+S/pXfRoxfP0sy/uC8o/rwNY8m4064PLftr4v67IwvJBkZn3JetwE54YEi41qoPCOXuBHIYAbGbwwHvF+JvxNeGcHI+EBxAUSeKxwkeV2GgYGP8Y4qI+NNni/CO78ZmB299A8UIEqeYFcdtrvCwKD7+929995/WFebnnmWDxRsZ2BUimCcF8Z7a3fOTrft3oxnTRgZl0c9/iRzZ6uF4pvL6TWMrYwvF5atsZE8Zv1ug8U1aamPh3O2e50zZvzO1VrDyFjAGGvSXcZ4fFu6bBWTqcbqcLWPTHxzEo6BPGVfFff/IOMMoDWf7jz/9cBKpUOMwULoCM85D7c9YF+7Mu7Zyzj3oRzz6VV6r12nOodNuj/hw2qfPXeatoHljSQvX2JUEMtjZJz7WOuC6tnECz9FtpnkMv49+AksH8h42owx+mEsJ9eO1XE/tM7e9GJ4/+h622pojIX1KB6Ywrgh3v67LpPtUY4VSS8dt+1P+3sOIsvnG1KuOf0Q45bLC+/pXJWL7FrLWP+qqpkTIqvAwMBxPMY18RUj4zbGY/f2MjDEPmFgkIElhsVAvvwbc0Z3cPjzLv53gwEdaDDvm/QVEn973LaexZA3DganUAAFYMD/ITCctAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		.s0 { fill: #a1d5b8 } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m5 0h22c2.8 0 5 2.2 5 5v22c0 2.8-2.2 5-5 5h-22c-2.8 0-5-2.2-5-5v-22c0-2.8 2.2-5 5-5z"/>
+	<use id="Background" href="#img1" x="1" y="5"/>
+	<g>
+	</g>
+</svg>
