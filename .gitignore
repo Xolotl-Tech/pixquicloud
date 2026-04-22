@@ -1,0 +1,6 @@
+config/config.php
+data/
+.htaccess
+.user.ini
+updater/
+*.log
