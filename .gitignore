@@ -4,3 +4,4 @@ data/
 .user.ini
 updater/
 *.log
+.DS_Store
