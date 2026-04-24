@@ -210,7 +210,7 @@
     "Error" : "Error",
     "Forum" : "Foro",
     "Legal notice" : "Aviso legal",
-    "Developed by the {communityopen}Nextcloud community{linkclose}, the {githubopen}source code{linkclose} is licensed under the {licenseopen}AGPL{linkclose}." : "Desarrollado por la  {communityopen}comunidad Nextcloud {linkclose}, el {githubopen}código fuente {linkclose} está licenciado bajo  {licenseopen}AGPL{linkclose}.",
+    "Developed by the {communityopen}Nextcloud community{linkclose}, the {githubopen}source code{linkclose} is licensed under the {licenseopen}AGPL{linkclose}." : "Desarrollado por {communityopen}Xolotl Tech{linkclose} fork de Nextcloud, el {githubopen}código fuente{linkclose} está bajo la licencia {licenseopen}AGPL{linkclose}.",
     "Like our Facebook page" : "Da un Like a nuestra página de Facebook",
     "Check out our blog" : "Visita nuestro blog",
     "Subscribe to our newsletter" : "Suscribete a nuestro boletín",

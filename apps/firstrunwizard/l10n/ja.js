@@ -96,7 +96,7 @@ OC.L10N.register(
     "… and many more improvements in all apps!" : "…そして、すべてのアプリでさらに多くの改善が！",
     "Experience the brand new Nextcloud Hub!" : "まったく新しいNextcloud Hubを体験しましょう！",
     "Get to know the new features of Hub {version}" : "Hub {version}の新機能を知る",
-    "Time to own your collaboration: Meet Nextcloud Hub 26 Winter! 🚀" : "コラボレーションを自在に：Nextcloud Hub 26 Winter 登場！🚀",
+    "Time to own your collaboration: Meet Pixquicloud Hub 26 Winter! 🚀" : "コラボレーションを自在に：Pixquicloud Hub 26 Winter 登場！🚀",
     "What's new?" : "新着情報？",
     "Nextcloud on all your devices" : "あなたの全てのデバイスで Nextcloud を",
     "Nextcloud Hub {version}" : "Nextcloud Hub {version}",

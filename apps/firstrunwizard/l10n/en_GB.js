@@ -96,7 +96,7 @@ OC.L10N.register(
     "… and many more improvements in all apps!" : "… and many more improvements in all apps!",
     "Experience the brand new Nextcloud Hub!" : "Experience the brand new Nextcloud Hub!",
     "Get to know the new features of Hub {version}" : "Get to know the new features of Hub {version}",
-    "Time to own your collaboration: Meet Nextcloud Hub 26 Winter! 🚀" : "Time to own your collaboration: Meet Nextcloud Hub 26 Winter! 🚀",
+    "Time to own your collaboration: Meet Pixquicloud Hub 26 Winter! 🚀" : "Time to own your collaboration: Meet Pixquicloud Hub 26 Winter! 🚀",
     "What's new?" : "What's new?",
     "Nextcloud on all your devices" : "Nextcloud on all your devices",
     "Nextcloud Hub {version}" : "Nextcloud Hub {version}",

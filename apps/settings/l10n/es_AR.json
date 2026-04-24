@@ -568,7 +568,7 @@
     "Legal notice" : "Aviso legal",
     "Privacy policy" : "Políticas de privacidad",
     "Reasons to use Nextcloud in your organization" : "Motivos para usar Nextcloud en tu organización",
-    "Developed by the {communityopen}Nextcloud community{linkclose}, the {githubopen}source code{linkclose} is licensed under the {licenseopen}AGPL{linkclose}." : "Desarrollado por la  {communityopen}comunidad Nextcloud {linkclose}, el {githubopen}código fuente {linkclose} está licenciado bajo  {licenseopen}AGPL{linkclose}.",
+    "Developed by the {communityopen}Nextcloud community{linkclose}, the {githubopen}source code{linkclose} is licensed under the {licenseopen}AGPL{linkclose}." : "Desarrollado por {communityopen}Xolotl Tech{linkclose} fork de Nextcloud, el {githubopen}código fuente{linkclose} está bajo la licencia {licenseopen}AGPL{linkclose}.",
     "Like our Facebook page" : "Me gusta en nuestra página de Facebook",
     "Follow us on Mastodon" : "Seguinos en Mastodon",
     "Check out our blog" : "Visitá nuestro blog",

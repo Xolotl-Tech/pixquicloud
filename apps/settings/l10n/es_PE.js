@@ -205,7 +205,7 @@ OC.L10N.register(
     "The app has been enabled but needs to be updated. You will be redirected to the update page in 5 seconds." : "La aplicación está habilitada pero necesita ser actualizada. Serás redireccionado a la página de actualización en 5 segundos. ",
     "Error" : "Error",
     "Forum" : "Foro",
-    "Developed by the {communityopen}Nextcloud community{linkclose}, the {githubopen}source code{linkclose} is licensed under the {licenseopen}AGPL{linkclose}." : "Desarrollado por la  {communityopen}comunidad Nextcloud {linkclose}, el {githubopen}código fuente {linkclose} está licenciado bajo  {licenseopen}AGPL{linkclose}.",
+    "Developed by the {communityopen}Nextcloud community{linkclose}, the {githubopen}source code{linkclose} is licensed under the {licenseopen}AGPL{linkclose}." : "Desarrollado por {communityopen}Xolotl Tech{linkclose} fork de Nextcloud, el {githubopen}código fuente{linkclose} está bajo la licencia {licenseopen}AGPL{linkclose}.",
     "Like our Facebook page" : "Da un Like a nuestra página de Facebook",
     "Check out our blog" : "Visita nuestro blog",
     "Subscribe to our newsletter" : "Suscribete a nuestro boletín",

@@ -96,7 +96,7 @@ OC.L10N.register(
     "… and many more improvements in all apps!" : "... ir daugybė kitų patobulinimų visose programėlėse!",
     "Experience the brand new Nextcloud Hub!" : "Išbandykite visiškai naują „Nextcloud Hub“!",
     "Get to know the new features of Hub {version}" : "Susipažinkite su naujomis „Hub“ {version} funkcijomis ",
-    "Time to own your collaboration: Meet Nextcloud Hub 26 Winter! 🚀" : "Atėjo laikas imtis iniciatyvos bendradarbiaujant: susipažinkite su „Nextcloud Hub 26 Winter“! 🚀",
+    "Time to own your collaboration: Meet Pixquicloud Hub 26 Winter! 🚀" : "Atėjo laikas imtis iniciatyvos bendradarbiaujant: susipažinkite su „Pixquicloud Hub 26 Winter“! 🚀",
     "What's new?" : "Kas naujo?",
     "Nextcloud on all your devices" : "„Nextcloud“ visuose jūsų įrenginiuose",
     "Nextcloud Hub {version}" : "„Nextcloud Hub“ {version}",

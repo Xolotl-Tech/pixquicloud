@@ -96,7 +96,7 @@ OC.L10N.register(
     "… and many more improvements in all apps!" : "… 以及所有应用的更多改进！",
     "Experience the brand new Nextcloud Hub!" : "立即体验全新的 Nextcloud Hub！",
     "Get to know the new features of Hub {version}" : "了解 Hub {version} 的新功能",
-    "Time to own your collaboration: Meet Nextcloud Hub 26 Winter! 🚀" : "掌握属于您的协作平台：迎接 Nextcloud Hub 26 冬季版！🚀",
+    "Time to own your collaboration: Meet Pixquicloud Hub 26 Winter! 🚀" : "掌握属于您的协作平台：迎接 Pixquicloud Hub 26 冬季版！🚀",
     "What's new?" : "有哪些更新？",
     "Nextcloud on all your devices" : "您所有设备上的 Nextcloud",
     "Nextcloud Hub {version}" : "Nextcloud Hub {version}",
