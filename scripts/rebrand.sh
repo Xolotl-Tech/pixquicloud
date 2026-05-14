@@ -29,14 +29,14 @@ php "$NC_ROOT/occ" config:app:set theming url --value="https://pixqui.cloud"
 [ -f "$IMG_DIR/favicon.ico" ] && cp "$IMG_DIR/favicon.ico" "$NC_ROOT/core/img/favicon.ico"
 
 # 4. Reemplazar strings en firstrunwizard
-sed -i '' 's/Nextcloud/PixquiCloud/g' "$NC_ROOT/apps/firstrunwizard/l10n/es.js"
-sed -i '' 's/Nextcloud/PixquiCloud/g' "$NC_ROOT/apps/firstrunwizard/l10n/es_MX.js"
+sed -i  's/Nextcloud/PixquiCloud/g' "$NC_ROOT/apps/firstrunwizard/l10n/es.js"
+sed -i  's/Nextcloud/PixquiCloud/g' "$NC_ROOT/apps/firstrunwizard/l10n/es_MX.js"
 php "$NC_ROOT/occ" config:app:delete firstrunwizard show_wizard
 
 # Reemplazar strings en core
-sed -i '' 's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/lib/private/Server.php" 2>/dev/null
-sed -i '' 's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/version.php" 2>/dev/null
-sed -i '' 's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/apps/settings/templates/settings/admin/overview.php" 2>/dev/null
+sed -i  's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/lib/private/Server.php" 2>/dev/null
+sed -i  's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/version.php" 2>/dev/null
+sed -i  's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/apps/settings/templates/settings/admin/overview.php" 2>/dev/null
 # 5. Limpiar caché
 php "$NC_ROOT/occ" maintenance:repair
 
