@@ -264,7 +264,7 @@ OC.L10N.register(
     "An internal error occurred." : "Ha habido un error interno.",
     "Please try again or contact your administrator." : "Por favor reintente nuevamente o contáctese con su administrador.",
     "Password" : "Contraseña",
-    "Remember me" : "Recordarme",
+    "Remember me" : "Mantener sesión iniciada",
     "Log in with a device" : "Iniciar sesión con dispositivo",
     "Login or email" : "Nombre de usuario o correo electrónico",
     "Your account is not setup for passwordless login." : "Tu cuenta no está configurada para iniciar de sesión sin contraseña",
