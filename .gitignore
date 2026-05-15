@@ -4,7 +4,18 @@ data/
 .user.ini
 updater/
 *.log
+scripts/\[*
 .DS_Store
+
+# Archivos auto-generados y compilados
+3rdparty/
+dist/
+apps/*/js/
+apps/*/css/
+apps/*/img/
+*.chunk.mjs
+*.chunk.mjs.map
+*.chunk.mjs.license
 
 # Apps locales de prueba
 apps/calendar/

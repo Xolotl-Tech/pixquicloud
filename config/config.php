@@ -22,4 +22,5 @@ $CONFIG = array (
   'instancename' => 'PixquiCloud',
   'defaultapp' => 'dashboard,files',
   'maintenance' => false,
+  'loglevel' => 2,
 );
