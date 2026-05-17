@@ -1,0 +1,49 @@
+/**
+ * PixquiCloud — Talk app
+ */
+
+.talk-sidebar,
+#app-spreed #app-navigation,
+#spreed #app-navigation {
+	background: var(--app-bg-1) !important;
+}
+
+.conversation-list,
+.conversation-list__item {
+	background: transparent !important;
+	border-bottom: 1px solid var(--app-line) !important;
+	color: var(--app-ink-1) !important;
+}
+.conversation-list__item:hover,
+.conversation-list__item--active {
+	background: var(--app-bg-3) !important;
+}
+
+.message-main,
+.messages-list,
+.chat-message {
+	background: var(--app-bg-0) !important;
+	color: var(--app-ink-1) !important;
+}
+
+.message-bubble,
+.chat-message__bubble {
+	background: var(--app-bg-2) !important;
+	border: 1px solid var(--app-line) !important;
+	color: var(--app-ink-1) !important;
+	border-radius: 12px !important;
+}
+
+.message-bubble--own,
+.chat-message--own .chat-message__bubble {
+	background: var(--app-mint-soft) !important;
+	border-color: var(--app-mint-line) !important;
+	color: var(--app-mint) !important;
+}
+
+.message-input,
+.chat-input,
+.new-message {
+	background: var(--app-bg-2) !important;
+	border-top: 1px solid var(--app-line) !important;
+}

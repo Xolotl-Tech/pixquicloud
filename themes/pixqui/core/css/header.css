@@ -1,0 +1,138 @@
+/**
+ * PixquiCloud — Header, logo & top app menu
+ */
+
+#body-user #header,
+#body-settings #header,
+#body-public #header {
+	background: var(--app-bg-0) !important;
+}
+
+#body-login {
+	background: linear-gradient(135deg, #0a0d0b 0%, #1e582e 50%, #84b79d 100%);
+}
+
+/* ── Legacy .primary buttons ── */
+.primary,
+input[type="submit"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary {
+	border-color: var(--green);
+	background-color: var(--green);
+	color: #fff;
+}
+
+.primary:hover,
+input[type="submit"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover,
+.primary:focus,
+input[type="submit"].primary:focus,
+input[type="button"].primary:focus,
+button.primary:focus,
+.button.primary:focus {
+	background-color: var(--green-soft);
+}
+
+/* ── SVGs del header ── */
+#header svg:not(.user-status-icon svg) {
+	filter: brightness(0) invert(1);
+}
+
+#header .app-menu .app-menu-entry img,
+#header .app-menu .app-menu-entry svg {
+	filter: brightness(0) invert(1) !important;
+}
+
+#header .logo,
+#header .logo img,
+#header .logo svg {
+	filter: brightness(0) invert(1);
+}
+
+#header .account-menu__avatar img {
+	filter: none !important;
+}
+
+#header .user-status-icon svg {
+	filter: none !important;
+}
+
+/* ── Focus ring ── */
+a:focus,
+button:focus,
+.button:focus,
+.action-item__menutoggle:focus,
+.action-item.action-item--single:focus {
+	outline-color: var(--green) !important;
+}
+
+/* ── Selected / active states ── */
+.selected,
+.app-navigation-entry-link.active,
+.app-navigation-entry-link:focus,
+.app-navigation-entry-link:hover,
+.unified-search__result.active,
+.settings-section button.primary,
+.settings-button,
+.action-item.action-item--primary {
+	border-color: var(--green) !important;
+	background-color: var(--green) !important;
+	color: #ffffff !important;
+}
+
+/* ── Logo ── */
+#header .logo,
+#firstrunwizard .logo {
+	background-image: url(../img/logo/logo.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 220px;
+	height: 56px;
+}
+
+#header .logo-icon {
+	background-image: url('../img/logo-icon.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 44px;
+	height: 44px;
+}
+
+#header .header-appname {
+	display: none;
+}
+
+/* ── App menu top bar ── */
+#app-dashboard > h2[data-v-39235001],
+.app-menu-entry__label[data-v-9736071a] #app-dashboard > h2[data-v-527ea318] {
+	color: #fff !important;
+}
+
+.app-menu-entry--active[data-v-9736071a]::before {
+	background-color: var(--green) !important;
+}
+
+/* Renombrar Nextcloud Office → PixquiOffice */
+[data-app-id="richdocuments"] .app-menu-entry--label,
+[aria-label="Nextcloud Office"] {
+	font-size: 0 !important;
+}
+[data-app-id="richdocuments"] .app-menu-entry--label::after,
+[aria-label="Nextcloud Office"]::after {
+	content: "PixquiOffice";
+	font-size: 12px;
+}
+
+#header .app-menu-entry__label {
+	color: #ffffff !important;
+}
+
+#header .app-menu-entry:hover,
+#header .app-menu-entry:focus,
+#header .app-menu-entry--active {
+	background-color: transparent !important;
+	box-shadow: none !important;
+}

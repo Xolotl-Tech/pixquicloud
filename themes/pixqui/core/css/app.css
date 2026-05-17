@@ -1,0 +1,382 @@
+/**
+ * PixquiCloud — Dark app theme
+ * Aplica a Files, Settings y toda la interfaz principal
+ */
+
+/* ── Tokens internos (alias de la paleta global) ── */
+#body-user,
+#body-settings {
+	--app-bg-0:        var(--bg);
+	--app-bg-1:        var(--bg-2);
+	--app-bg-2:        var(--panel);
+	--app-bg-3:        var(--panel-2);
+	--app-bg-4:        var(--panel-2);
+	--app-line:        var(--border);
+	--app-line-strong: var(--border-strong);
+	--app-ink-0:       var(--ink);
+	--app-ink-1:       var(--ink-2);
+	--app-ink-2:       var(--mute);
+	--app-ink-3:       var(--mute-2);
+	--app-mint:        var(--green);
+	--app-mint-strong: var(--green-soft);
+	--app-mint-soft:   rgba(132,183,157,0.12);
+	--app-mint-line:   rgba(132,183,157,0.25);
+	--app-danger:      #d98b8b;
+
+	/* Nextcloud CSS vars */
+	--color-main-background:      var(--app-bg-0) !important;
+	--color-main-background-blur: var(--app-bg-0) !important;
+	--color-main-text:            var(--app-ink-1) !important;
+	--color-text-maxcontrast:     var(--app-ink-0) !important;
+	--color-text-lighter:         var(--app-ink-3) !important;
+	--color-placeholder-dark:     var(--app-ink-3) !important;
+	--color-placeholder-light:    var(--app-ink-3) !important;
+	--color-border:               var(--app-line) !important;
+	--color-border-dark:          var(--app-line) !important;
+	--color-border-maxcontrast:   var(--app-line-strong) !important;
+	--color-background-dark:      var(--app-bg-2) !important;
+	--color-background-darker:    var(--app-bg-1) !important;
+	--color-background-hover:     var(--app-bg-3) !important;
+	--color-scrollbar:            var(--app-bg-3) !important;
+
+	/* Sin fondo con imagen ni márgenes del contenedor */
+	--image-background:           none !important;
+	--body-container-margin:      0px !important;
+	--body-container-radius:      0px !important;
+
+	background-color: var(--app-bg-0) !important;
+	background-image: none !important;
+	color: var(--app-ink-1) !important;
+}
+
+/* Fondo del body sin imagen */
+#body-user body,
+#body-settings body,
+body:has(#body-user),
+body:has(#body-settings) {
+	background-image: none !important;
+	background-color: var(--app-bg-0) !important;
+}
+
+/* #content sin márgenes ni bordes redondeados */
+#body-user #content,
+#body-settings #content {
+	margin: 0 !important;
+	margin-top: var(--header-height) !important;
+	border-radius: 0 !important;
+	width: 100% !important;
+}
+
+/* ── Layout principal ── */
+#body-user #content,
+#body-user #content-vue,
+#body-settings #content,
+#body-settings #content-vue {
+	background: var(--app-bg-0) !important;
+}
+
+#app-content,
+#app-content-vue,
+.app-content,
+[id="app-content"] {
+	background: var(--app-bg-0) !important;
+}
+
+/* ── Sidebar / navegación ── */
+#app-navigation,
+#app-navigation-vue,
+.app-navigation {
+	background: var(--app-bg-1) !important;
+	border-right: 1px solid var(--app-line) !important;
+}
+
+.app-navigation-caption,
+.app-navigation__caption,
+nav.app-navigation li.app-navigation-caption {
+	color: var(--app-ink-3) !important;
+	font-size: 0.65rem !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.1em !important;
+	text-transform: uppercase !important;
+	padding: 16px 16px 4px !important;
+}
+
+.app-navigation-entry,
+.app-navigation-entry a,
+nav.app-navigation li > a {
+	color: var(--app-ink-2) !important;
+	border-radius: 8px !important;
+}
+
+.app-navigation-entry-link:hover,
+.app-navigation-entry > a:hover {
+	background: var(--app-bg-3) !important;
+	color: var(--app-ink-0) !important;
+}
+
+.app-navigation-entry--active > a,
+.app-navigation-entry-link.active,
+nav.app-navigation li.active > a {
+	background: var(--app-mint-soft) !important;
+	color: var(--app-ink-0) !important;
+	font-weight: 600 !important;
+}
+
+.app-navigation-entry svg,
+.app-navigation-entry img {
+	color: var(--app-ink-2) !important;
+	opacity: 0.85;
+}
+.app-navigation-entry--active svg,
+.app-navigation-entry--active img {
+	color: var(--app-mint) !important;
+	opacity: 1;
+}
+
+#app-navigation .app-navigation-toggle,
+.app-navigation__toggle,
+#app-navigation-toggle,
+.app-navigation-toggle + h1,
+.navigation-toggler {
+	color: var(--app-ink-0) !important;
+}
+
+/* ── Storage bar ── */
+.storage-stats-info,
+.quota-bar,
+.quota,
+[class*="quota"] {
+	color: var(--app-ink-3) !important;
+}
+.quota-bar__bar,
+[class*="quota__bar"] {
+	background: var(--app-bg-3) !important;
+	border-radius: 99px;
+	overflow: hidden;
+}
+.quota-bar__bar--used,
+[class*="quota__bar--used"] {
+	background: var(--app-mint) !important;
+}
+
+/* ── Toolbar ── */
+.app-content__header,
+#app-content .files-controls,
+.files-controls,
+#controls,
+.controls {
+	background: var(--app-bg-0) !important;
+	border-bottom: 1px solid var(--app-line) !important;
+	color: var(--app-ink-1) !important;
+}
+
+/* ── Breadcrumb ── */
+.breadcrumb,
+.breadcrumb__crumb,
+.breadcrumb a,
+.path,
+[class*="breadcrumb"] {
+	color: var(--app-ink-2) !important;
+}
+.breadcrumb__crumb--current,
+.breadcrumb a:last-child {
+	color: var(--app-ink-0) !important;
+	font-weight: 600 !important;
+}
+.breadcrumb svg, .breadcrumb .icon {
+	color: var(--app-ink-3) !important;
+}
+
+/* ── Search ── */
+.unified-search,
+.unified-search__input,
+input[type="search"].unified-search__input {
+	background: var(--app-bg-2) !important;
+	border: 1px solid var(--app-line-strong) !important;
+	color: var(--app-ink-1) !important;
+	border-radius: 99px !important;
+}
+.unified-search__input::placeholder { color: var(--app-ink-3) !important; }
+.unified-search svg { color: var(--app-ink-3) !important; }
+
+/* ── Botones ── */
+.button-vue--vue-primary,
+.button-vue.button-vue--vue-primary,
+button.button-vue--vue-primary {
+	background: var(--app-mint) !important;
+	color: var(--bg) !important;
+	border: none !important;
+	border-radius: 99px !important;
+	font-weight: 600 !important;
+}
+.button-vue--vue-primary:hover {
+	background: var(--app-mint-strong) !important;
+}
+
+.button-vue--vue-secondary,
+.button-vue.button-vue--vue-secondary {
+	background: var(--app-bg-3) !important;
+	color: var(--app-ink-1) !important;
+	border: 1px solid var(--app-line-strong) !important;
+	border-radius: 99px !important;
+}
+.button-vue--vue-secondary:hover {
+	background: var(--app-bg-4) !important;
+	color: var(--app-ink-0) !important;
+}
+
+/* ── Lista de archivos ── */
+.files-list,
+.files-list__header,
+#files-list,
+.list-item-content,
+[class*="files-list"] {
+	background: var(--app-bg-0) !important;
+	color: var(--app-ink-1) !important;
+}
+
+.files-list__row,
+.files-list__row-checkbox,
+tr.files-list__row {
+	border-bottom: 1px solid var(--app-line) !important;
+	color: var(--app-ink-1) !important;
+}
+.files-list__row:hover,
+tr.files-list__row:hover {
+	background: var(--app-bg-2) !important;
+}
+
+.files-list__column-sort-button,
+.files-list__column-name,
+th, td {
+	color: var(--app-ink-3) !important;
+	font-size: 0.72rem !important;
+	letter-spacing: 0.05em !important;
+	text-transform: uppercase !important;
+}
+
+.files-list__row-name,
+.files-list__row-name span,
+.files-list__row .file-name {
+	color: var(--app-ink-1) !important;
+	font-size: 0.88rem !important;
+	text-transform: none !important;
+	letter-spacing: 0 !important;
+}
+
+.files-list__row-mtime,
+.files-list__row-size,
+.files-list__row-sharers {
+	color: var(--app-ink-3) !important;
+	font-size: 0.82rem !important;
+	text-transform: none !important;
+	letter-spacing: 0 !important;
+}
+
+.files-list__row-icon svg,
+.files-list__row svg {
+	color: var(--app-ink-2) !important;
+}
+
+.files-list__row-action--star svg,
+.favorite-marker-icon svg {
+	color: var(--papel) !important;
+}
+
+/* ── View toggle ── */
+#view-toggle button,
+.files-controls__view-toggle button,
+[class*="view-toggle"] button {
+	background: var(--app-bg-2) !important;
+	border: 1px solid var(--app-line-strong) !important;
+	color: var(--app-ink-2) !important;
+	border-radius: 8px !important;
+}
+[class*="view-toggle"] button.active,
+[class*="view-toggle"] button[aria-pressed="true"] {
+	background: var(--app-bg-4) !important;
+	color: var(--app-mint) !important;
+}
+
+/* ── Filter tabs ── */
+.files-filter-bar,
+.filter-bar,
+[class*="filter-bar"] {
+	background: transparent !important;
+}
+.filter-bar__button,
+.files-filter-bar__button,
+[class*="filter-bar"] button {
+	background: var(--app-bg-2) !important;
+	border: 1px solid var(--app-line-strong) !important;
+	color: var(--app-ink-2) !important;
+	border-radius: 99px !important;
+	font-size: 0.82rem !important;
+	transition: all 0.15s !important;
+}
+[class*="filter-bar"] button.active,
+[class*="filter-bar"] button[aria-pressed="true"],
+[class*="filter-bar"] button:hover {
+	background: var(--app-bg-4) !important;
+	border-color: var(--app-mint-line) !important;
+	color: var(--app-mint) !important;
+}
+
+/* ── Modals ── */
+.modal-container,
+.dialog,
+.modal-wrapper .modal-container {
+	background: var(--app-bg-2) !important;
+	border: 1px solid var(--app-line-strong) !important;
+	color: var(--app-ink-1) !important;
+	border-radius: 14px !important;
+}
+.modal-header,
+.dialog__header {
+	border-bottom: 1px solid var(--app-line) !important;
+}
+
+/* ── Dropdowns ── */
+.v-popper__popper .v-popper__inner,
+.popover,
+.popovermenu,
+.menu {
+	background: var(--app-bg-2) !important;
+	border: 1px solid var(--app-line-strong) !important;
+	border-radius: 10px !important;
+	box-shadow: 0 16px 48px -8px rgba(0,0,0,0.6) !important;
+}
+.popovermenu li a,
+.menu li a,
+.v-popper__popper li {
+	color: var(--app-ink-1) !important;
+}
+.popovermenu li a:hover,
+.menu li a:hover,
+.v-popper__popper li:hover {
+	background: var(--app-bg-3) !important;
+}
+
+/* ── Inputs ── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+	background: var(--app-bg-2) !important;
+	border: 1px solid var(--app-line-strong) !important;
+	color: var(--app-ink-1) !important;
+	border-radius: 8px !important;
+}
+input:focus, select:focus, textarea:focus {
+	border-color: var(--app-mint-line) !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/* ── Scrollbars ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--app-bg-4); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--app-line-strong); }

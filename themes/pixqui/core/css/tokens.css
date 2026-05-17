@@ -1,0 +1,39 @@
+/**
+ * PixquiCloud — Design tokens
+ * Paleta de marca: dark premium + minimal técnico con calidez mexicana
+ */
+
+:root {
+	/* ── Verdes (marca) ── */
+	--green-deep:    #1e582e;
+	--green:         #84b79d;
+	--green-soft:    #b8d4c4;
+
+	/* ── Fondos / neutros ── */
+	--bg:            #0a0d0b;
+	--bg-2:          #0f1411;
+	--panel:         #141a16;
+	--panel-2:       #1a2220;
+	--border:        #1f2a23;
+	--border-strong: #2c3a31;
+	--black:         #000000;
+
+	/* ── Acentos cálidos ── */
+	--cream:         #f5ead4;
+	--papel:         #f3c969;
+
+	/* ── Texto ── */
+	--ink:           #e8efe9;
+	--ink-2:         #c5cfc7;
+	--mute:          #7a8a80;
+	--mute-2:        #4a5650;
+
+	/* ── Nextcloud primary overrides ── */
+	--color-primary:                   var(--green) !important;
+	--color-primary-hover:             var(--green-soft) !important;
+	--color-primary-text:              #ffffff !important;
+	--color-primary-element:           var(--green) !important;
+	--color-primary-element-hover:     var(--green-soft) !important;
+	--color-primary-element-text:      #ffffff !important;
+	--color-primary-element-text-dark: #ffffff !important;
+}

@@ -1,0 +1,32 @@
+/**
+ * PixquiCloud — Activity app
+ */
+
+.activity-content,
+#app-activity #app-content,
+.activity-list {
+	background: var(--app-bg-0) !important;
+	color: var(--app-ink-1) !important;
+}
+
+.activity-entry,
+.activity-list__item {
+	border-bottom: 1px solid var(--app-line) !important;
+	color: var(--app-ink-1) !important;
+	background: transparent !important;
+}
+.activity-entry:hover,
+.activity-list__item:hover {
+	background: var(--app-bg-2) !important;
+}
+
+.activity-entry__subject,
+.activity-list__item-subject {
+	color: var(--app-ink-0) !important;
+}
+
+.activity-entry__time,
+.activity-list__item-time {
+	color: var(--app-ink-3) !important;
+	font-size: 0.78rem !important;
+}

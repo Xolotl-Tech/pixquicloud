@@ -1,0 +1,47 @@
+/**
+ * PixquiCloud — Calendar app (FullCalendar)
+ */
+
+.calendar-grid,
+.fc,
+.fc-view,
+.fc-scrollgrid,
+.fc-col-header,
+.fc-daygrid-body,
+.fc-timegrid-body {
+	background: var(--app-bg-0) !important;
+	color: var(--app-ink-1) !important;
+	border-color: var(--app-line) !important;
+}
+
+.fc-col-header-cell,
+.fc-daygrid-day,
+.fc-timegrid-slot {
+	background: var(--app-bg-0) !important;
+	border-color: var(--app-line) !important;
+	color: var(--app-ink-2) !important;
+}
+
+.fc-daygrid-day:hover,
+.fc-timegrid-slot:hover {
+	background: var(--app-bg-2) !important;
+}
+
+.fc-button,
+.fc-button-primary {
+	background: var(--app-bg-3) !important;
+	border: 1px solid var(--app-line-strong) !important;
+	color: var(--app-ink-1) !important;
+	border-radius: 8px !important;
+}
+.fc-button:hover,
+.fc-button-primary:hover {
+	background: var(--app-bg-4) !important;
+}
+
+.fc-event {
+	background: var(--app-mint-soft) !important;
+	border: 1px solid var(--app-mint-line) !important;
+	color: var(--app-mint) !important;
+	border-radius: 6px !important;
+}

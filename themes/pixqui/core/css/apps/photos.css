@@ -1,0 +1,14 @@
+/**
+ * PixquiCloud — Photos app
+ */
+
+#app-photos,
+[id*="photos"] #app-content,
+body[class*="photos"] #app-content {
+	background: var(--app-bg-0) !important;
+}
+
+.photo-grid,
+.photos-list {
+	background: var(--app-bg-0) !important;
+}

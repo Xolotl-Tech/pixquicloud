@@ -20,7 +20,8 @@ $CONFIG = array (
   'installed' => true,
   'theme' => 'pixqui',
   'instancename' => 'PixquiCloud',
-  'defaultapp' => 'dashboard,files',
+  'defaultapp' => 'files',
   'maintenance' => false,
   'loglevel' => 2,
+  'config_preset' => 6,
 );
