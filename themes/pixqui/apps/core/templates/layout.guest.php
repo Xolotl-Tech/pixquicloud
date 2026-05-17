@@ -28,8 +28,8 @@
 	<body id="<?php p($_['bodyid']); ?>" <?php foreach ($_['enabledThemes'] as $themeId) {
 		p("data-theme-$themeId ");
 	} ?> data-themes="<?php p(join(',', $_['enabledThemes'])) ?>">
-		<?php include 'layout.noscript.warning.php'; ?>
-		<?php include 'layout.initial-state.php'; ?>
+		<?php include \OC::$SERVERROOT . '/core/templates/layout.noscript.warning.php'; ?>
+		<?php include \OC::$SERVERROOT . '/core/templates/layout.initial-state.php'; ?>
 		<?php print_unescaped($_['content']); ?>
 	</body>
 </html>
