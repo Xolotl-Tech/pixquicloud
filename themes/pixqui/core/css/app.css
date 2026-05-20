@@ -118,7 +118,7 @@ nav.app-navigation li > a {
 .app-navigation-entry--active > a,
 .app-navigation-entry-link.active,
 nav.app-navigation li.active > a {
-	background: var(--app-mint-soft) !important;
+	background: #313e35 !important;
 	color: var(--app-ink-0) !important;
 	font-weight: 600 !important;
 }
