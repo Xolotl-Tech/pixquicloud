@@ -89,6 +89,9 @@ body:has(#body-settings) {
 .app-navigation {
 	background: var(--app-bg-1) !important;
 	border-right: 1px solid var(--app-line) !important;
+	/* Override primary color for Vue scoped active-entry CSS (.active[data-v-*]) */
+	--color-primary-element:       #313e35 !important;
+	--color-primary-element-hover: #3d4f42 !important;
 }
 
 .app-navigation-caption,
