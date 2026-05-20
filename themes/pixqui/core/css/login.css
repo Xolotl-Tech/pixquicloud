@@ -105,6 +105,7 @@
 		linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
 		linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
 	background-size: 48px 48px;
+	-webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 	mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 }
 
@@ -249,22 +250,6 @@
 	margin-right: 10px;
 }
 
-.pq-mockup-progress {
-	width: 90px;
-	height: 3px;
-	background: rgba(255,255,255,0.08);
-	border-radius: 2px;
-	overflow: hidden;
-	flex-shrink: 0;
-}
-.pq-mockup-progress > span {
-	display: block;
-	width: 40%;
-	height: 100%;
-	background: var(--pq-accent);
-	border-radius: 2px;
-}
-
 /* ── File list mockup ── */
 .pq-file-list {
 	display: flex;
@@ -386,7 +371,7 @@
 .status {
 	position: relative;
 	z-index: 2;
-	margin-top: 208px;
+	margin-top: auto;
 	padding: 14px 16px;
 	border: 1px solid var(--line);
 	border-radius: var(--radius-md);
@@ -413,7 +398,6 @@
 }
 
 .status strong { color: var(--ink-1); font-weight: 500; }
-.pq-left-status strong { color: var(--pq-text); font-weight: 600; }
 
 /* ══════════════════════════════════════
    RIGHT PANEL

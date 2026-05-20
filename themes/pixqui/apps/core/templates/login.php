@@ -70,10 +70,10 @@
 			</div>
 			
 			<div class="status">
-			<span class="live"></span>
-			Servicios <strong>operativos</strong> &middot; 99.98% &uacute;ltimo mes &middot; 
-			<span>verificado hace 2 min</span>
-		</div>
+				<span class="live"></span>
+				Servicios <strong>operativos</strong> &middot; 99.98% &uacute;ltimo mes &middot;
+				<span>verificado hace 2 min</span>
+			</div>
 		</div>
 	</div>
 
