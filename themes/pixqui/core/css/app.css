@@ -256,7 +256,8 @@ tr.files-list__row:hover {
 
 .files-list__column-sort-button,
 .files-list__column-name,
-th, td {
+.files-list th,
+.files-list td {
 	color: var(--app-ink-3) !important;
 	font-size: 0.72rem !important;
 	letter-spacing: 0.05em !important;
