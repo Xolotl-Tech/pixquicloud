@@ -45,7 +45,7 @@ button.primary:focus,
 #header .logo,
 #header .logo img,
 #header .logo svg {
-	filter: brightness(0) invert(1);
+	filter: none;
 }
 
 #header .account-menu__avatar img {
@@ -76,15 +76,16 @@ button:focus,
 /* ── Logo ── */
 #header .logo,
 #firstrunwizard .logo {
-	background-image: url(../img/logo/logo.svg);
+	background-image: url(../img/logo/logo-mono-light.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 220px;
-	height: 56px;
+	background-position: left center;
+	width: 44px;
+	height: 44px;
 }
 
 #header .logo-icon {
-	background-image: url('../img/logo/logo-icon.svg');
+	background-image: url('../img/logo/logo-mark.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 44px;

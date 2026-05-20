@@ -144,13 +144,10 @@
 	width: 28px;
 	height: 28px;
 	border-radius: var(--radius-sm);
-	background: var(--mint);
-	color: var(--bg-0);
-	display: grid;
-	place-items: center;
+	overflow: hidden;
 	flex-shrink: 0;
 }
-.pq-logo-icon svg { width: 16px; height: 16px; color: var(--bg-0); }
+.pq-logo-icon img { width: 28px; height: 28px; display: block; }
 
 .pq-left-logo > span {
 	color: var(--ink-0);
