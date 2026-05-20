@@ -565,18 +565,21 @@
 	outline: none !important;
 }
 
-#body-login .input-field input::placeholder {
-	color: var(--pq-text-muted) !important;
-	opacity: 1 !important;
+/* El label flotante actúa de placeholder — ocultar siempre el placeholder nativo */
+#body-login .input-field:not(.input-field--label-outside) .input-field__input::placeholder {
+	opacity: 0 !important;
 }
 
 #body-login .input-field label,
 #body-login .input-field .input-field__label {
 	color: var(--pq-text-muted) !important;
-	font-size: 0.68rem !important;
-	font-weight: 700 !important;
-	letter-spacing: 0.08em !important;
-	text-transform: uppercase !important;
+}
+
+/* Fondo del label flotante: debe coincidir con el panel derecho */
+#body-login .input-field__input:focus + .input-field__label,
+#body-login .input-field__input:not(:placeholder-shown) + .input-field__label {
+	background-color: var(--pq-right-bg) !important;
+	color: var(--pq-text-muted) !important;
 }
 
 #body-login .input-field svg,
@@ -624,6 +627,8 @@
 
 /* ── Submit button ── */
 #body-login .login-form .button-vue--vue-primary,
+#body-login .password-less-login-form .button-vue--vue-primary,
+#body-login .reset-password-form .button-vue--vue-primary,
 #body-login .submit-wrapper .button-vue,
 #body-login [data-login-form-submit] {
 	background: var(--pq-accent) !important;
@@ -645,6 +650,8 @@
 }
 
 #body-login .login-form .button-vue--vue-primary:hover,
+#body-login .password-less-login-form .button-vue--vue-primary:hover,
+#body-login .reset-password-form .button-vue--vue-primary:hover,
 #body-login .submit-wrapper .button-vue:hover {
 	background: var(--mint-strong) !important;
 	box-shadow: 0 10px 32px -16px var(--mint) !important;
@@ -652,6 +659,8 @@
 }
 
 #body-login .login-form .button-vue--vue-primary:active,
+#body-login .password-less-login-form .button-vue--vue-primary:active,
+#body-login .reset-password-form .button-vue--vue-primary:active,
 #body-login .submit-wrapper .button-vue:active {
 	transform: translateY(0) !important;
 }
