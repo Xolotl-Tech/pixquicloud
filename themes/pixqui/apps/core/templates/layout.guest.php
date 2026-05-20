@@ -15,7 +15,10 @@
 		<meta charset="utf-8">
 		<title><?php p(!empty($_['pageTitle']) ? $_['pageTitle'] . ' – ' : ''); p($theme->getTitle()); ?></title>
 		<meta name="csp-nonce" nonce="<?php p($_['cspNonce']); /* Do not pass into "content" to prevent exfiltration */ ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0<?php if (isset($_['viewport_maximum_scale'])) { p(', maximum-scale=' . $_['viewport_maximum_scale']); } ?>">
+		<?php if ($theme->getiTunesAppId() !== '') { ?>
+		<meta name="apple-itunes-app" content="app-id=<?php p($theme->getiTunesAppId()); ?>">
+		<?php } ?>
 		<meta name="theme-color" content="<?php p($theme->getColorPrimary()); ?>">
 		<link rel="icon" href="<?php print_unescaped(image_path('core', 'favicon.ico')); ?>">
 		<link rel="apple-touch-icon" href="<?php print_unescaped(image_path('core', 'favicon-touch.png')); ?>">
