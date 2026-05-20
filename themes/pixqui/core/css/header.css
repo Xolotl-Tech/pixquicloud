@@ -8,10 +8,6 @@
 	background: var(--app-bg-0) !important;
 }
 
-#body-login {
-	background: linear-gradient(135deg, #0a0d0b 0%, #1e582e 50%, #84b79d 100%);
-}
-
 /* ── Legacy .primary buttons ── */
 .primary,
 input[type="submit"].primary,
@@ -69,14 +65,8 @@ button:focus,
 	outline-color: var(--green) !important;
 }
 
-/* ── Selected / active states ── */
-.selected,
-.app-navigation-entry-link.active,
-.app-navigation-entry-link:focus,
-.app-navigation-entry-link:hover,
-.unified-search__result.active,
+/* ── Primary action states (navigation hover/active handled by app.css) ── */
 .settings-section button.primary,
-.settings-button,
 .action-item.action-item--primary {
 	border-color: var(--green) !important;
 	background-color: var(--green) !important;
@@ -94,7 +84,7 @@ button:focus,
 }
 
 #header .logo-icon {
-	background-image: url('../img/logo-icon.svg');
+	background-image: url('../img/logo/logo-icon.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 44px;

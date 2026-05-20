@@ -38,7 +38,7 @@
 .chat-message--own .chat-message__bubble {
 	background: var(--app-mint-soft) !important;
 	border-color: var(--app-mint-line) !important;
-	color: var(--app-mint) !important;
+	color: var(--app-ink-0) !important;
 }
 
 .message-input,
