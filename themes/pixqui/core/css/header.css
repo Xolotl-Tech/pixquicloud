@@ -42,12 +42,6 @@ button.primary:focus,
 	filter: brightness(0) invert(1) !important;
 }
 
-#header .logo,
-#header .logo img,
-#header .logo svg {
-	filter: none;
-}
-
 #header .account-menu__avatar img {
 	filter: none !important;
 }
@@ -74,22 +68,16 @@ button:focus,
 }
 
 /* ── Logo ── */
+#header #nextcloud .logo,
 #header .logo,
 #firstrunwizard .logo {
-	background-image: url(../img/logo/logo-mono-light.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: left center;
-	width: 44px;
-	height: 44px;
-}
-
-#header .logo-icon {
-	background-image: url('../img/logo/logo-mark.svg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 44px;
-	height: 44px;
+	background-image: url(../img/logo/logo-mark.svg) !important;
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	width: 44px !important;
+	height: 44px !important;
+	filter: none !important;
 }
 
 #header .header-appname {
