@@ -16,7 +16,7 @@
 	--ink-0:         #e8efe9;
 	--ink-1:         #c5cfc7;
 	--ink-2:         #7a8a80;
-	--ink-3:         #4a5650;
+	--ink-3:         #5e6e68;
 	/* Accent – green */
 	--mint:          #84b79d;
 	--mint-strong:   #b8d4c4;
@@ -458,7 +458,7 @@
 
 .pq-welcome-line2::after {
 	content: '|';
-	color: #fff;
+	color: var(--ink-0);
 	font-weight: 300;
 	animation: pq-blink 1.1s step-end infinite;
 	margin-left: 2px;
