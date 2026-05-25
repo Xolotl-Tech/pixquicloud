@@ -693,11 +693,11 @@
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
-	#body-login { overflow: auto !important; }
-	.pq-login-root  { flex-direction: column; height: auto; min-height: 100vh; }
-	.pq-left        { flex: none; padding: 32px 28px; }
+	#body-login { overflow: hidden !important; }
+	.pq-login-root  { flex-direction: column; height: 100vh; min-height: 100vh; }
+	.pq-left        { display: none !important; }
 	.pq-left-body   { padding: 24px 0; }
 	.pq-mockup      { display: none; }
-	.pq-right       { flex: none; border-left: none; border-top: 1px solid var(--pq-border); }
+	.pq-right       { flex: 1; border-left: none; border-top: none; width: 100%; }
 	.pq-right-body  { padding: 32px 28px; max-width: 100%; }
 }
