@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+
+    .pq-left,
+    .split-login__left,
+    .left-panel,
+    .login-wrapper__left {
+        display: none !important;
+    }
+
+    .pq-right,
+    .split-login__right,
+    .right-panel,
+    .login-wrapper__right {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    .split-login,
+    .login-wrapper,
+    .pq-login {
+        display: block !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    body#body-login {
+        overflow-x: hidden !important;
+    }
+}

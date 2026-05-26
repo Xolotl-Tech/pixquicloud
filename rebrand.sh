@@ -1,95 +1,41 @@
 #!/bin/bash
+# PixquiCloud rebrand script
+NC_ROOT="/www/wwwroot/app.pixqui.cloud"
+PHP="/www/server/php/83/bin/php"
+IMG_DIR="$NC_ROOT/themes/pixqui/core/img/logo"
+BG_DIR="$NC_ROOT/themes/pixqui/core/img/background"
 
-###############################################################################
-# PixquiCloud Rebrand Script
-# Elimina archivos por defecto de Nextcloud para rebranding
-###############################################################################
+echo "Aplicando rebrand PixquiCloud..."
 
-set -e
+# 1. Config del sistema
+$PHP "$NC_ROOT/occ" config:system:set instancename --value="PixquiCloud"
+$PHP "$NC_ROOT/occ" config:system:set theme --value="pixqui"
 
-NEXTCLOUD_DIR="$(cd "$(dirname "$0")" && pwd)"
+# 2. Theming app
+$PHP "$NC_ROOT/occ" app:enable theming 2>/dev/null
+$PHP "$NC_ROOT/occ" config:app:set theming name --value="PixquiCloud"
+$PHP "$NC_ROOT/occ" config:app:set theming slogan --value="Tu nube, tu control"
+$PHP "$NC_ROOT/occ" config:app:set theming color --value="#6EA68F"
+$PHP "$NC_ROOT/occ" config:app:set theming url --value="https://pixqui.cloud"
+[ -f "$IMG_DIR/logo.png" ] && $PHP "$NC_ROOT/occ" theming:config logo "$IMG_DIR/logo.png"
+[ -f "$IMG_DIR/logo.png" ] && $PHP "$NC_ROOT/occ" theming:config logoheader "$IMG_DIR/logo.png"
+[ -f "$IMG_DIR/favicon.ico" ] && $PHP "$NC_ROOT/occ" theming:config favicon "$IMG_DIR/favicon.ico"
+[ -f "$BG_DIR/pixqui-background.webp" ] && $PHP "$NC_ROOT/occ" theming:config background "$BG_DIR/pixqui-background.webp"
 
-echo "🎨 Iniciando proceso de rebranding PixquiCloud..."
-echo "📍 Directorio: $NEXTCLOUD_DIR"
+# 3. Copiar logo al core
+[ -f "$IMG_DIR/logo.svg" ] && cp "$IMG_DIR/logo.svg" "$NC_ROOT/core/img/logo.svg"
+[ -f "$IMG_DIR/logo.svg" ] && cp "$IMG_DIR/logo.svg" "$NC_ROOT/core/img/logo-icon.svg"
+[ -f "$IMG_DIR/favicon.ico" ] && cp "$IMG_DIR/favicon.ico" "$NC_ROOT/core/img/favicon.ico"
 
-# Colores para output
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-NC='\033[0m' # No Color
+# 4. Strings
+sed -i 's/Nextcloud/PixquiCloud/g' "$NC_ROOT/apps/firstrunwizard/l10n/es.js"
+sed -i 's/Nextcloud/PixquiCloud/g' "$NC_ROOT/apps/firstrunwizard/l10n/es_MX.js"
+sed -i 's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/lib/private/Server.php" 2>/dev/null
+sed -i 's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/version.php" 2>/dev/null
+sed -i 's/Nextcloud Hub/PixquiCloud/g' "$NC_ROOT/apps/settings/templates/settings/admin/overview.php" 2>/dev/null
+$PHP "$NC_ROOT/occ" config:app:delete firstrunwizard show_wizard
 
-# === SKELETON (archivos plantilla para nuevos usuarios) ===
-echo -e "\n${YELLOW}[1/3]${NC} Limpiando skeleton (archivos plantilla)..."
+# 5. Limpiar caché
+$PHP "$NC_ROOT/occ" maintenance:repair
 
-SKELETON_PATH="$NEXTCLOUD_DIR/core/skeleton"
-
-if [ -d "$SKELETON_PATH" ]; then
-    # Eliminar PDFs por defecto
-    rm -f "$SKELETON_PATH/Reasons to use Nextcloud.pdf"
-    rm -f "$SKELETON_PATH/Nextcloud Manual.pdf"
-    echo -e "${GREEN}✓${NC} PDFs eliminados del skeleton"
-    
-    # Eliminar archivos de bienvenida
-    rm -f "$SKELETON_PATH/Readme.md"
-    rm -f "$SKELETON_PATH/Documents/Readme.md"
-    rm -f "$SKELETON_PATH/Documents/Nextcloud flyer.pdf"
-    rm -f "$SKELETON_PATH/Documents/Welcome to Nextcloud Hub.docx"
-    echo -e "${GREEN}✓${NC} Archivos de bienvenida eliminados"
-    
-    # Eliminar Readme de Photos y Templates
-    rm -f "$SKELETON_PATH/Photos/Readme.md"
-    rm -f "$SKELETON_PATH/Templates/Readme.md"
-    echo -e "${GREEN}✓${NC} README files de carpetas especiales eliminados"
-else
-    echo -e "${RED}✗${NC} No se encontró: $SKELETON_PATH"
-fi
-
-# === DATA USERS (eliminar archivos de usuarios existentes) ===
-echo -e "\n${YELLOW}[2/3]${NC} Limpiando archivos de usuarios existentes..."
-
-DATA_PATH="$NEXTCLOUD_DIR/data"
-
-if [ -d "$DATA_PATH" ]; then
-    # Buscar y eliminar archivos por defecto en todas las carpetas de usuario
-    find "$DATA_PATH" -type f -name "Reasons to use Nextcloud.pdf" -delete
-    find "$DATA_PATH" -type f -name "Nextcloud Manual.pdf" -delete
-    find "$DATA_PATH" -type f -name "Nextcloud flyer.pdf" -delete
-    find "$DATA_PATH" -type f -name "Welcome to Nextcloud Hub.docx" -delete
-    echo -e "${GREEN}✓${NC} Archivos por defecto eliminados de usuarios"
-    
-    # Eliminar Readme.md de usuarios (excepto backups)
-    find "$DATA_PATH" -type f -path "*/files/Readme.md" ! -path "*/backups/*" -delete
-    find "$DATA_PATH" -type f -path "*/files/Documents/Readme.md" ! -path "*/backups/*" -delete
-    find "$DATA_PATH" -type f -path "*/files/Photos/Readme.md" ! -path "*/backups/*" -delete
-    find "$DATA_PATH" -type f -path "*/files/Templates/Readme.md" ! -path "*/backups/*" -delete
-    echo -e "${GREEN}✓${NC} README files eliminados de usuarios"
-else
-    echo -e "${YELLOW}⚠${NC} No se encontró carpeta data: $DATA_PATH"
-fi
-
-# === APPS (eliminar archivos de intro de apps) ===
-echo -e "\n${YELLOW}[3/3]${NC} Limpiando archivos de apps..."
-
-APPS_PATH="$NEXTCLOUD_DIR/apps"
-
-# Eliminar tutoriales de firstrunwizard si existe
-if [ -d "$APPS_PATH/firstrunwizard" ]; then
-    find "$APPS_PATH/firstrunwizard" -type f \( -name "*.pdf" -o -name "*welcome*" -o -name "*intro*" \) -delete 2>/dev/null || true
-    echo -e "${GREEN}✓${NC} Archivos de introducción de firstrunwizard eliminados"
-fi
-
-# Eliminar recursos por defecto de otros archivos
-if [ -d "$APPS_PATH" ]; then
-    find "$APPS_PATH" -type f -name "*Nextcloud*" ! -path "*/vendor/*" -delete 2>/dev/null || true
-fi
-
-echo -e "${GREEN}✓${NC} Limpieza de apps completada"
-
-# === SUMMARY ===
-echo -e "\n${GREEN}✅ Rebranding completado exitosamente!${NC}"
-echo -e "\n📋 Resumen de cambios:"
-echo -e "  • Archivos plantilla (skeleton) limpiados"
-echo -e "  • Archivos de usuarios existentes limpiados"
-echo -e "  • Archivos de introducción removidos"
-echo -e "  • La próxima vez que se agreguen usuarios verán solo archivos PixquiCloud"
-echo ""
+echo "Rebrand completo. PixquiCloud listo."
